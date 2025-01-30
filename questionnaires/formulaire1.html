@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation en ligne</title>
+    <link rel="stylesheet" href="styleformulaire.css">
+</head>
+<body onload="startTimer()">
+    <p id="timer">Temps restant: 3mn:00s</p>
+
+    <section id="qcm-section">
+        <div>
+            <h4>Examen N°1</h4>
+            <table border="4" cellpadding="10" cellspacing="4" style="text-align:center">
+               <!-- thead est pour l'entête du tableau  -->
+                <thead>
+                    <tr id="entête">
+                        <th>N°</th>
+                        <th>Questions</th>
+                        <th>Réponses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Première question -->
+                    <tr>
+                      <td>1</td>  
+                      <td>Qui est le premier ministre du Burkina Faso?
+                        <p>A.Bossolma Bazié</p>
+                        <p>B.Jean Emmanuel Ouédraogo</p>
+                        <p>C. Kielem de Tambela</p>
+                        <p>D.Ismaël Sombié</p>
+                        <span id="rps1-result" class="result-box"></span>
+                      </td>
+                      <td>
+                        <table id="rps1">
+                            <tr>
+                                <td>A <input type="checkbox" name="rps1" value="A"></td>
+                            </tr>
+                            <tr>
+                                <td>B <input type="checkbox" name="rps1" value="B"></td>
+                            </tr>
+                            <tr>
+                                <td>C <input type="checkbox" name="rps1" value="C"></td>
+                            </tr>
+                            <tr>
+                                <td>D <input type="checkbox" name="rps1" value="D"></td>
+                            </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    
+                    <!-- Deuxième question -->
+                    <tr>
+                        <td>2</td>  
+                        <td>La science historique moderne est née dans les années:
+                          <p>A. 1880</p>
+                          <p>B. 1945</p>
+                          <p>C. 1900</p>
+                          <p>D. 1930</p>
+                          <span id="rps2-result" class="result-box"></span>
+                        </td>
+                        <td>
+                          <table id="rps2">
+                              <tr>
+                                  <td>A <input type="checkbox" name="rps2" value="A"></td>
+                              </tr>
+                              <tr>
+                                  <td>B <input type="checkbox" name="rps2" value="B"></td>
+                              </tr>
+                              <tr>
+                                  <td>C <input type="checkbox" name="rps2" value="C"></td>
+                              </tr>
+                              <tr>
+                                  <td>D <input type="checkbox" name="rps2" value="D"></td>
+                              </tr>
+                          </table>
+                        </td>
+                      </tr>
+
+<!-- Troisième question -->
+<tr>
+    <td>3</td>  
+    <td>Qui est le premier ministre du Burkina Faso?
+      <p>A.Bossolma Bazié</p>
+      <p>B.Jean Emmanuel Ouédraogo</p>
+      <p>C. Kielem de Tambela</p>
+      <p>D.Ismaël Sombié</p>
+      <span id="rps3-result" class="result-box"></span>
+    </td>
+    <td>
+      <table id="rps3">
+          <tr>
+              <td>A <input type="checkbox" name="rps3" value="A"></td>
+          </tr>
+          <tr>
+              <td>B <input type="checkbox" name="rps3" value="B"></td>
+          </tr>
+          <tr>
+              <td>C <input type="checkbox" name="rps3" value="C"></td>
+          </tr>
+          <tr>
+              <td>D <input type="checkbox" name="rps3" value="D"></td>
+          </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Quatrième question -->
+  <tr>
+    <td>4</td>  
+    <td>Qui est le premier ministre du Burkina Faso?
+      <p>A.Bossolma Bazié</p>
+      <p>B.Jean Emmanuel Ouédraogo</p>
+      <p>C. Kielem de Tambela</p>
+      <p>D.Ismaël Sombié</p>
+      <span id="rps4-result" class="result-box"></span>
+    </td>
+    <td>
+      <table id="rps4">
+          <tr>
+              <td>A <input type="checkbox" name="rps4" value="A"></td>
+          </tr>
+          <tr>
+              <td>B <input type="checkbox" name="rps4" value="B"></td>
+          </tr>
+          <tr>
+              <td>C <input type="checkbox" name="rps4" value="C"></td>
+          </tr>
+          <tr>
+              <td>D <input type="checkbox" name="rps4" value="D"></td>
+          </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Cinquième question -->
+  <tr>
+    <td>5</td>  
+    <td>Qui est le premier ministre du Burkina Faso?
+      <p>A.Bossolma Bazié</p>
+      <p>B.Jean Emmanuel Ouédraogo</p>
+      <p>C. Kielem de Tambela</p>
+      <p>D.Ismaël Sombié</p>
+      <span id="rps5-result" class="result-box"></span>
+    </td>
+    <td>
+      <table id="rps5">
+          <tr>
+              <td>A <input type="checkbox" name="rps5" value="A"></td>
+          </tr>
+          <tr>
+              <td>B <input type="checkbox" name="rps5" value="B"></td>
+          </tr>
+          <tr>
+              <td>C <input type="checkbox" name="rps5" value="C"></td>
+          </tr>
+          <tr>
+              <td>D <input type="checkbox" name="rps5" value="D"></td>
+          </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Sixième question -->
+  <tr>
+    <td>6</td>  
+    <td>Qui est le premier ministre du Burkina Faso?
+      <p>A.Bossolma Bazié</p>
+      <p>B.Jean Emmanuel Ouédraogo</p>
+      <p>C. Kielem de Tambela</p>
+      <p>D.Ismaël Sombié</p>
+      <span id="rps6-result" class="result-box"></span>
+    </td>
+    <td>
+      <table id="rps6">
+          <tr>
+              <td>A <input type="checkbox" name="rps6" value="A"></td>
+          </tr>
+          <tr>
+              <td>B <input type="checkbox" name="rps6" value="B"></td>
+          </tr>
+          <tr>
+              <td>C <input type="checkbox" name="rps6" value="C"></td>
+          </tr>
+          <tr>
+              <td>D <input type="checkbox" name="rps6" value="D"></td>
+          </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Septième question -->
+  <tr>
+    <td>7</td>  
+    <td>Qui est le premier ministre du Burkina Faso?
+      <p>A.Bossolma Bazié</p>
+      <p>B.Jean Emmanuel Ouédraogo</p>
+      <p>C. Kielem de Tambela</p>
+      <p>D.Ismaël Sombié</p>
+      <span id="rps7-result" class="result-box"></span>
+    </td>
+    <td>
+      <table id="rps7">
+          <tr>
+              <td>A <input type="checkbox" name="rps7" value="A"></td>
+          </tr>
+          <tr>
+              <td>B <input type="checkbox" name="rps7" value="B"></td>
+          </tr>
+          <tr>
+              <td>C <input type="checkbox" name="rps7" value="C"></td>
+          </tr>
+          <tr>
+              <td>D <input type="checkbox" name="rps7" value="D"></td>
+          </tr>
+          
+      </table>
+    </td>
+  </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <button type="button" onclick="termine()">Terminer</button>
+        <p id="note"></p>
+    </section>
+    
+    <script src="temps.js"></script>
+</body>
+</html>

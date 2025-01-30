@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen QCM</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .question-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background: #218838;
+        }
+        #note {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Examen QCM</h1>
+            <p id="timer">Temps restant : 03:00</p>
+        </header>
+
+        <section id="qcm-section">
+            <div class="question-card">
+                <h4>1. Qui est le premier ministre du Burkina Faso ?</h4>
+                <ul>
+                    <li><label><input type="radio" name="q1" value="A"> A. Bossolma Bazié</label></li>
+                    <li><label><input type="radio" name="q1" value="B"> B. Jean Emmanuel Ouédraogo</label></li>
+                    <li><label><input type="radio" name="q1" value="C"> C. Kielem de Tambela</label></li>
+                    <li><label><input type="radio" name="q1" value="D"> D. Ismaël Sombié</label></li>
+                </ul>
+                <span class="result" id="q1-result"></span>
+            </div>
+
+            <div class="question-card">
+                <h4>2. Quelle est la capitale du Burkina Faso ?</h4>
+                <ul>
+                    <li><label><input type="radio" name="q2" value="A"> A. Ouagadougou</label></li>
+                    <li><label><input type="radio" name="q2" value="B"> B. Bobo-Dioulasso</label></li>
+                    <li><label><input type="radio" name="q2" value="C"> C. Koudougou</label></li>
+                    <li><label><input type="radio" name="q2" value="D"> D. Banfora</label></li>
+                </ul>
+                <span class="result" id="q2-result"></span>
+            </div>
+
+            <button class="submit-btn" onclick="corrigerQCM()">Terminer</button>
+            <p id="note"></p>
+        </section>
+    </div>
+    
+    <script>
+        function corrigerQCM() {
+            let score = 0;
+            let correctAnswers = { "q1": "C", "q2": "A" };
+            
+            for (let question in correctAnswers) {
+                let selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected) {
+                    let resultSpan = document.getElementById(`${question}-result`);
+                    if (selected.value === correctAnswers[question]) {
+                        resultSpan.innerHTML = "✅ Correct";
+                        resultSpan.style.color = "green";
+                        score++;
+                    } else {
+                        resultSpan.innerHTML = "❌ Incorrect";
+                        resultSpan.style.color = "red";
+                    }
+                }
+            }
+            document.getElementById("note").innerHTML = `Votre score est de ${score}/2`;
+        }
+    </script>
+</body>
+</html>
